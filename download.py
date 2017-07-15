@@ -12,6 +12,6 @@ num = 0
 
 for item in coll:
 	try:
-		download(item['identifier'], verbose=True, on_the_fly=True, glob_pattern='*mobi')
+		download(item['identifier'], verbose=True, on_the_fly=True, no_directory=True, ignore_errors=True, destdir='downloads')
 	except requests.exceptions.HTTPError as e:
 		print("Could not download file")
